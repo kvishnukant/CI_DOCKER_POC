@@ -377,12 +377,12 @@
       <check>
 	  
 	  <haltOnFailure>true</haltOnFailure>
-	  <branchRate>90</branchRate>
-    <lineRate>90</lineRate>
-    <totalBranchRate>90</totalBranchRate>
-    <totalLineRate>90</totalLineRate>
-    <packageLineRate>90</packageLineRate>
-    <packageBranchRate>90</packageBranchRate>
+	  <branchRate>0</branchRate>
+    <lineRate>0</lineRate>
+    <totalBranchRate>0</totalBranchRate>
+    <totalLineRate>0</totalLineRate>
+    <packageLineRate>0</packageLineRate>
+    <packageBranchRate>0</packageBranchRate>
 	  <!-- 
         Per-class thresholds
         <lineRate>90</lineRate>
