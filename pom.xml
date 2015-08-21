@@ -388,7 +388,7 @@
                         <goal>cobertura</goal>  
                     </goals>  
                     <check>
-                    	<coverage>90</coverage>
+                    	<totallinerate>90</totallinerate>
                     </check>
                 </execution>  
             </executions>        </plugin>
