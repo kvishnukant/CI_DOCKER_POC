@@ -370,15 +370,54 @@
 </plugin>
 
 			<plugin>
-			<groupId>org.codehaus.mojo</groupId>  
-<artifactId>cobertura-maven-plugin</artifactId>  
-            <version>2.5.2</version>  
-            <configuration>  
-                <formats>  
+		  <groupId>org.codehaus.mojo</groupId>
+   <artifactId>cobertura-maven-plugin</artifactId>
+   <version>2.4</version>
+   <configuration>
+      <check>
+	  
+	  <haltOnFailure>true</haltOnFailure>
+	  <branchRate>90</branchRate>
+    <lineRate>90</lineRate>
+    <totalBranchRate>90</totalBranchRate>
+    <totalLineRate>90</totalLineRate>
+    <packageLineRate>90</packageLineRate>
+    <packageBranchRate>90</packageBranchRate>
+	  <!-- 
+        Per-class thresholds
+        <lineRate>90</lineRate>
+        <branchRate>90</branchRate>
+        Project-wide thresholds
+        <totalLineRate>100</totalLineRate>
+        <totalBranchRate>100</totalBranchRate>
+		<haltOnFailure>true</haltOnFailure> -->
+      </check>
+      <executions>
+        <execution>
+          <goals>
+            <goal>clean</goal>
+            <goal>check</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>coverage-tests</id>
+          <!-- The "verify" phase occurs just before "install" -->
+          <phase>verify</phase>
+          <goals>
+            <goal>clean</goal>
+            <goal>check</goal>
+          </goals>
+        </execution>
+      </executions>
+     <!--           <formats>  
                     <format>xml</format>  
 					<format>html</format> 
-                </formats>  
-            </configuration>  
+                </formats> 
+                <check>
+				<linerate>90</linerate>
+					<totallinerate>100</totallinerate>
+                </check>				
+              
             <executions>  
                 <execution>  
                     <phase>package</phase>  
@@ -387,11 +426,10 @@
 					<goal>report</goal>  
                         <goal>cobertura</goal>  
                     </goals>  
-                    <check>
-                    	<totallinerate>90</totallinerate>
-                    </check>
                 </execution>  
-            </executions>        </plugin>
+            </executions>  -->
+</configuration>			
+			</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
