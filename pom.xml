@@ -387,6 +387,9 @@
 					<goal>report</goal>  
                         <goal>cobertura</goal>  
                     </goals>  
+                    <check>
+                    	<coverage>90</coverage>
+                    </check>
                 </execution>  
             </executions>        </plugin>
 			</plugins>
