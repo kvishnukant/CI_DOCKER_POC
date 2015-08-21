@@ -375,23 +375,27 @@
    <version>2.4</version>
    <configuration>
       <check>
-	  
-	  <haltOnFailure>true</haltOnFailure>
+	  <!-- passing the build -->
+	<!--  <haltOnFailure>true</haltOnFailure>
 	  <branchRate>0</branchRate>
     <lineRate>0</lineRate>
     <totalBranchRate>0</totalBranchRate>
     <totalLineRate>0</totalLineRate>
     <packageLineRate>0</packageLineRate>
-    <packageBranchRate>0</packageBranchRate>
-	  <!-- 
-        Per-class thresholds
-        <lineRate>90</lineRate>
-        <branchRate>90</branchRate>
-        Project-wide thresholds
-        <totalLineRate>100</totalLineRate>
-        <totalBranchRate>100</totalBranchRate>
-		<haltOnFailure>true</haltOnFailure> -->
-      </check>
+    <packageBranchRate>0</packageBranchRate> -->
+    
+    <!-- failing build -->
+    
+  <!--   <haltOnFailure>true</haltOnFailure>
+	  <branchRate>90</branchRate>
+    <lineRate>90</lineRate>
+    <totalBranchRate>90</totalBranchRate>
+    <totalLineRate>90</totalLineRate>
+    <packageLineRate>90</packageLineRate>
+    <packageBranchRate>90</packageBranchRate> -->
+    
+	 
+   </check>
       <executions>
         <execution>
           <goals>
@@ -408,7 +412,7 @@
             <goal>check</goal>
           </goals>
         </execution>
-      </executions>
+      </executions> 
      <!--           <formats>  
                     <format>xml</format>  
 					<format>html</format> 
