@@ -5,8 +5,6 @@
   city CHAR(20)
 ); */
 
-
-
 -- for MySQL
  
  CREATE  TABLE `test`.`employee` (
